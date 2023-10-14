@@ -86,7 +86,7 @@
           <div class="form__group-content">
             <div class="form__input--code">
               <div class="form__label--code">〒
-                <input type="text" name="code" placeholder="123-4567" value="{{ old('code') }}" pattern="\d{3}-\d{4}" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');"/></div>
+                <input type="text" name="code" inputmode="url" placeholder="123-4567" value="{{ old('code') }}" pattern="\d{3}-\d{4}" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');"/></div>
             </div>
             <p class="small-txt">例）123-4567</p>
             <div class="form__error">

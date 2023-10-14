@@ -22,7 +22,7 @@
 
 <form class="search-form">
 
-  <div class="search-form__title">
+  <div class="search-form__name">
    <h2>お名前</h2>
   </div>
   <div class="search-form__item">
@@ -43,7 +43,7 @@
 <div class="spacer"></div>
 
 
-  <div class="search-form__title">
+  <div class="search-form__date">
     <h2>登録日</h2>
   </div>
 
@@ -57,7 +57,7 @@
 
 <div class="spacer"></div>
 
-  <div class="search-form__title">
+  <div class="search-form__email">
     <h2>メールアドレス</h2>
   </div>
   <div class="search-form__item">
@@ -73,7 +73,6 @@
 <div class="spacer"></div>
 
   <div class="search-form__reset">
-    <!-- <input type="reset" name="reset" value="リセット" > -->
     <a href="{{ route('/management') }}">リセット</a>
   </div>
 
@@ -95,24 +94,24 @@
 @foreach ($contacts as $contact)
       <tr class="management-table__row">
         <div class="management-table__item">
-          <form class="update-form">
-            <td class="update-form__item">
-              <p class="update-form__item-input">{{ $contact['id'] }}</p>
+          <form class="management-form">
+            <td class="management-form__item">
+              <p class="management-form__item-input">{{ $contact['id'] }}</p>
             </td>
 
-            <td class="update-form__item">
-              <p class="update-form__item-input">{{ $contact['fullname'] }}</p>
+            <td class="management-form__item">
+              <p class="management-form__item-input">{{ $contact['fullname'] }}</p>
             </td>
 
-            <td class="update-form__item">
-              <p class="update-form__item-input">{{ $contact['gender'] }}</p>
+            <td class="management-form__item">
+              <p class="management-form__item-input">{{ $contact['gender'] }}</p>
             </td>
 
-            <td class="update-form__item">
-              <p class="update-form__item-input">{{ $contact['email'] }}</p>
+            <td class="management-form__item">
+              <p class="management-form__item-input">{{ $contact['email'] }}</p>
             </td>
 
-            <td class="update-form__item">
+            <td class="management-form__item">
               <div class="balloonoya">{{ Str::limit( $contact['content'] , 50) }}
                  @if (mb_strlen($contact['content'])>25.1)
                  <span class="balloon">{{ mb_substr($contact['content'] , 25,)}}</span>

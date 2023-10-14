@@ -8,10 +8,6 @@ label {
     font-size: 18px;
 }
 
-.search-form__title {
-  width: 150px;
-}
-
 .search-form__gender {
     margin-left: 30px;
     width: 70px;
@@ -44,9 +40,11 @@ label {
 }
 
 .search-form__date,
-.search-form__name {
+.search-form__name,
+.search-form__email {
+    width: 150px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -138,32 +136,32 @@ label {
     width: 90%;
 }
 
-.update-form {
+.management-form {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.update-form__item {
+.management-form__item {
     /* width: 20%; */
     /* line-height: 50%; */
     height: 60px;
 }
 
-.update-form__item-input {
+.management-form__item-input {
     font-size: 14px;
     width: 100%;
     outline: none;
     border: none;
 }
 
-.update-form__item-p {
+.management-form__item-p {
     text-align: left;
     font-size: 13px;
     
 }
 
-.update-form__button-submit {
+.management-form__button-submit {
     padding: 5px;
     width: 100%;
     border: none;
